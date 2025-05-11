@@ -11,7 +11,9 @@ from .serializer import UserSerializer
 
 @api_view(["GET"])
 def get_users(request):
-    return Response(UserSerializer({"name": "pedro", "age": 23}).data)
+    users = User.object.all()
+    serializer = UserSerializer(users, many=True)
+    return Response(serializer.data)
 
 
 @api_view(["POST"])
