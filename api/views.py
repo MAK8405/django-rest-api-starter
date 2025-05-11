@@ -10,7 +10,7 @@ from .serializer import UserSerializer
 
 
 @api_view(["GET"])
-def get_user(request):
+def get_users(request):
     return Response(UserSerializer({"name": "pedro", "age": 23}).data)
 
 
