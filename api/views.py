@@ -11,4 +11,4 @@ from .serializer import UserSerializer
 
 @api_view(["GET"])
 def get_user(request):
-    return Response(UserSerializer({"name": "pedro", "age": 23}))
+    return Response(UserSerializer({"name": "pedro", "age": 23}).data)
