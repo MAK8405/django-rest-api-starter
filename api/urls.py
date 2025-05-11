@@ -1,3 +1,4 @@
 from django.urls import path
-frm .views import get_user
+from .views import get_user
 
+urlpatterns = [path("users/", get_user, name="get_user")]
